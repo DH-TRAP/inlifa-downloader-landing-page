@@ -3,25 +3,25 @@
     /* Default variables */
     --def-font-fam-helvetica: Helvetica, sans-serif;
     --def-font-style: normal;
-    --def-font-size: 12px;
+    --def-font-size: 2rem;
     --def-font-weight: 400;
     /* Custom font variables */ 
     --cust-font-fam-claris: 'claris-sans';
     --cust-font-fam-josefin: 'Josefin Sans', sans-serif;
     --cust-font-fam-inter: 'Inter', sans-serif;
     /* Custom title variables */
-    --logo-size: 28px;
-    --title-size: 25px;
+    --logo-size: 3.5rem;
+    --title-size: 3.3rem;
     --title-weight: 600;
-    --description-size: 15px;
+    --description-size: 1.8rem;
     --description-weight: 400;
     /* Border Radius variable*/
-    --corner-radius: 5px;
+    --corner-radius: 5rem;
     /* Box Shadow variables */
-    --shadow-small-sharp: 5px 3px 3px rgba(0, 0, 0, 0.25);
-    --shadow-medium-sharp: 4px 5px 10px rgba(0, 0, 0, 0.5);
-    --shadow-medium-blur: 4px 5px 8px rgba(0, 0, 0, 0.25);
-    --shadow-large-blur: 4px 5px 15px rgba(0, 0, 0, 0.25);
+    --shadow-small-sharp: .5rem .3rem .3rem rgba(0, 0, 0, 0.25);
+    --shadow-medium-sharp: .4rem .5rem 1rem rgba(0, 0, 0, 0.5);
+    --shadow-medium-blur: .4rem .5rem .8rem rgba(0, 0, 0, 0.25);
+    --shadow-large-blur: .4rem .5rem 1.5rem rgba(0, 0, 0, 0.25);
     /* Color variables */
     --color-white: white;
     --color-black: black;
