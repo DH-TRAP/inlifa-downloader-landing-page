@@ -1,0 +1,506 @@
+/* Varaibles */
+:root {
+    /* Default variables */
+    --def-font-fam-helvetica: Helvetica, sans-serif;
+    --def-font-style: normal;
+    --def-font-size: 12px;
+    --def-font-weight: 400;
+    /* Custom font variables */ 
+    --cust-font-fam-claris: 'claris-sans';
+    --cust-font-fam-josefin: 'Josefin Sans', sans-serif;
+    --cust-font-fam-inter: 'Inter', sans-serif;
+    /* Custom title variables */
+    --logo-size: 28px;
+    --title-size: 25px;
+    --title-weight: 600;
+    --description-size: 15px;
+    --description-weight: 400;
+    /* Border Radius variable*/
+    --corner-radius: 5px;
+    /* Box Shadow variables */
+    --shadow-small-sharp: 5px 3px 3px rgba(0, 0, 0, 0.25);
+    --shadow-medium-sharp: 4px 5px 10px rgba(0, 0, 0, 0.5);
+    --shadow-medium-blur: 4px 5px 8px rgba(0, 0, 0, 0.25);
+    --shadow-large-blur: 4px 5px 15px rgba(0, 0, 0, 0.25);
+    /* Color variables */
+    --color-white: white;
+    --color-black: black;
+    --color-border: rgba(200, 200, 200, 0.514);
+    /* Gradient variables */
+    --grad-insta: 30deg, #fff265 0%, #fff050 5%, #ff402f 45%, #d9189c 60%, #184be7 90%;
+    --grad-insta-zoomed: 30deg, #fff265 0%, #fff050 0%, #ff402f 0%, #d9189c 0%, #184be7 880%;
+}
+/* Logo Font */
+@font-face {
+    font-family: 'claris-sans';
+    src: url('./fonts/claris-sans.ttf');
+}
+/* Global Variables */
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: var(--def-font-fam-helvetica);
+    font-style: var(--def-font-style);
+    font-size: var(--def-font-size);
+    font-weight: var(--def-font-weight);
+    outline: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:(var(--color-white));
+}
+main{
+    padding: 0 15rem;
+    height: 61.7rem; width: 126.6rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(var(--grad-insta));
+}
+header{
+    width: inherit;
+    padding: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+}
+/* Inside Main Tag */
+.inlifa-logo{
+    font-family: var(--cust-font-fam-claris);
+    font-size: var(--logo-size);
+    color: var(--color-white);
+}
+.lang{
+    font-family: var(--def-font-fam-helvetica);
+    font-size: 1.7rem;
+}
+.main-title{
+    margin: 10rem 0 5rem 0;
+    width: inherit;
+    padding: inherit;
+    color: var(--color-white);
+}
+/*////for common titles */
+.main-title > h1, .download-steps-title > h1, .features-title > h1, #faqs > h1{
+    text-align: center;
+    line-height: 5rem;
+    font-family: var(--cust-font-fam-josefin);
+    font-weight: var(--title-weight);
+    font-size: var(--title-size);
+}
+.main-title > p, .download-steps-title > p, .features-title > p {
+    text-align: center;
+    font-family: var(--def-font-fam-helvetica);
+    font-weight: var(--description-weight);
+    font-size: var(--description-size);
+}
+.download-steps-title > p {
+    font-size: 1.7rem;
+}
+.actions{
+    margin-bottom: 18rem;
+    padding: inherit;
+    width: inherit;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.url-group{
+    display: flex;
+    align-items:center;
+}
+.user-url{
+    height: 5rem; width: 82rem;
+    padding: 0rem 4rem 0rem 1rem;
+    font-family: var(--def-font-fam-helvetica);
+    font-size: 1.5rem;
+    border-radius: .7rem;
+    border: none;
+}
+.paste{
+    position: absolute;
+    margin-left: 75rem; padding: .3rem;
+    height: 3rem; width: 6rem;
+    text-align: center;
+    color: var(--color-white);
+    border-radius: 1rem;
+    border: none;
+    background: linear-gradient(var(--grad-insta-zoomed));
+}
+.paste > span > img{ width: 1.4rem; }
+.download > img{ width: 2rem; }
+.paste > span{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.paste > span > p{ font-size: 1.3rem; }
+.download{
+    height: 5.4rem; width: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    color: var(--color-white);
+    border-radius: .7rem;
+    border: none;
+    background-color: var(--color-black);
+}
+.download > p{ font-size: 1.6rem; }
+
+.downloaders{ display: flex; }
+.downloaders > button > img{ width: 2.5rem; }
+.ig{
+    padding-left: .6rem;
+    text-align:center;
+    border-radius: 2rem 0 0 2rem;
+    border-width: 0;
+    background-color: var(--color-black);
+}
+.downloader{
+    height: 4.4rem; width: 5.5rem;
+    border-width: 0 0.01rem 0 0;
+    border-color: var(--color-border);
+}
+.tk{
+    padding-right: .6rem;
+    border-width: 0;
+    border-radius: 0 2rem 2rem 0;
+}
+/*inlifa-insta(download-steps, features, faqs(footer)) - div */
+#inlifa-insta{
+    padding: 0rem 15rem;
+    width: 126.6rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+}
+    /* Download Steps */
+#download-steps{
+    padding: inherit;
+    padding-top: 6rem;
+    height: 61.7rem; width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.download-cards{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.download-card{
+    height: 25rem; width: 20rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem 3.3rem 2rem 2rem;
+    box-shadow: var(--shadow-medium-sharp);
+}
+div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
+    line-height: 5rem;
+    text-align: center;
+    font-family: var(--cust-font-fam-inter);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.card-top{
+    height: 12.5rem; width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem 2rem 0 0;
+    background: linear-gradient(var(--grad-insta));
+}
+.card-link{
+    height: 2rem; width: 17rem;
+    padding: .5rem;
+    text-align: center;
+    font-family: var(--def-font-fam-helvetica);
+    border-radius: 1rem;
+    background-color: var(--color-white);
+}
+.dummy-paste{
+    position: absolute;
+    margin-left: 12.2rem;
+    padding: .3rem;
+    height: 1.5rem; width: 3.9rem;
+    text-align: center;
+    border-radius: 1rem;
+    color: var(--color-white);
+    background: linear-gradient(var(--grad-insta-zoomed));
+}
+.dummy-paste > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+}
+.dummy-paste > span > img{ height: .7rem; width: .7rem; } 
+.dummy-text{ font-size: .75rem; }
+.step-1{ font-size: .8rem; }
+.step-2{
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+.step-3{
+    word-spacing: 1.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.step-callout{
+    margin: 2.5rem 0 0 8rem;
+    height: 0; width: 0;
+    position: absolute;
+    border-left: 1.5rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    border-bottom:1.5rem solid var(--color-black);
+}
+.step-callout p{
+    margin: 1rem 0rem 0rem -3rem;
+    padding: .2rem;
+    height: 1.7rem; width: 6rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 2rem;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    box-shadow: -0.2vh -0.1vw 0vw;
+}
+.card-bottom{
+    padding: 1.1rem;
+    height: 12.5rem; width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 2rem 2rem 0 0;
+}
+.step-title{
+    font-size: 1.7rem;
+}
+.step-instruction{
+    padding-top: 0.8rem;
+    border-top: .2rem solid var(--color-border);
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+    /* Features */
+#features{
+    padding: inherit;
+    padding-top: 6rem;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    border-top: .2rem solid var(--color-border);
+}
+.features-title{
+    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.feature{
+    margin-bottom: 7rem;
+    display: grid;
+    align-items: center;
+}
+.odd{ grid-template-columns: .8fr 1fr; }
+.even{
+    grid-template-columns: 1fr .7fr;
+    direction: rtl;
+    text-align: left;
+}
+.download-photos, .download-videos, .download-igtv,.download-reels, .download-story{
+    height: 32rem;
+    border-radius: 2.3rem;
+    box-shadow: var(--shadow-large-blur);
+}
+.img-group{ text-align: justify; }
+.download-reels, .download-story{
+    margin: 0 0.5rem;
+    height: 22rem;
+}
+.feature-content > h1{
+    line-height: 5rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+.feature-content > p{
+    font-size: 1.4rem;
+    font-weight: var(--description-size);
+}
+    /* Faqs */
+#faqs{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: inherit;
+}
+#faqs > h1{ line-height: 10rem; }
+.que{
+    padding: 0 1.8rem;
+    padding-bottom: 1rem;
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+}
+.que > span{
+    padding: 0 1.5rem .5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    border: .2rem solid var(--color-border);
+}
+.collapse{
+    cursor: pointer;
+    position: absolute;
+    margin: -.1rem -1.5rem;
+    height: 3.6rem; width: 96rem;
+}
+.que > span > h1, .cross-sign{
+    font-size: 2rem;
+    line-height: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+input[type="checkbox"]{ display: none; }
+input[type="checkbox"]:checked + label{ height: 20rem; }
+.cross-sign{
+    user-select: none;
+    word-wrap: break-word;
+}
+.que > span > p{ display: none; }
+    /* Footer */
+footer{
+    margin-top: 10rem;
+    padding: inherit;
+    height: 12rem; width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+.outro{
+    margin-right: 28rem;
+    padding: 2rem;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.copyright{
+    letter-spacing: .12rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.feature-links{
+    padding: 2rem 2rem 0 2rem;
+    height: inherit;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 4.5rem; row-gap: .8rem;
+}
+.other-links{
+    padding: 2rem;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.feature-links > a, .other-links > a{ font-size: 1.4rem; }
+/* Transitions */
+.inlifa-logo, .lang{
+    transition: 1s ease-in-out;
+    color: var(--color-white);
+}
+#header > .inlifa-logo:hover, .lang:hover{ color: var(--color-black); }
+.paste, .download, .download-card, .feature > img, .img-group > img{ transition: .5s ease-in-out; }
+.paste:hover{
+    height: 3.1rem; width: 6.1rem;
+    box-shadow: var(--shadow-medium-sharp);
+}
+.download:hover{
+    padding-top: 0.2rem;
+    box-shadow: var(--shadow-medium-sharp);
+}
+.download-card:hover{ margin-top: .5rem; }
+.feature > img:hover, .img-group > img:hover{ box-shadow: var(--shadow-medium-sharp); }
+/* End */
+
+
+/* Media Queries: Supported on almost all Android smartphones and tablets */
+/* Watch - 162px */
+@media (min-width: 0px) and (max-width: 162px) {
+    html {
+        font-size: 7.9%;  
+    }
+}
+/* Mobile S - 320px */
+@media (min-width: 163px) and (max-width: 320px) {
+    html {
+        font-size: 15.8%;  
+    }
+}
+/* Mobile M - 375px */
+@media (min-width: 321px) and (max-width: 375px) {
+    html {
+        font-size: 18.5%;  
+    }
+}
+/* Mobile L - 425px */
+@media (min-width: 376px) and (max-width: 425px) {
+    html {
+        font-size: 21%;
+    }
+}
+/* Tablet - 768px */
+@media (min-width: 426px) and (max-width: 768px) {
+    html {
+        font-size: 37.9%;
+    }
+}
+/* Laptop S - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 50.6%;
+    }
+}
+/* Laptop M - 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    html {
+        font-size: 66.6%;
+    }
+}
+/* Laptop L - 1536px */
+@media (min-width: 1441px) and (max-width: 1540px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* 4K- 2560px */
+@media (min-width: 1541px) and (max-width: 2560px) {
+    html {
+        font-size: 126.4%;
+    }
+}
