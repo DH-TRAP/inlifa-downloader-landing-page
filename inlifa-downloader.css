@@ -78,6 +78,7 @@ header{
 }
 /* Inside Main Tag */
 .inlifa-logo{
+    user-select: none;
     font-family: var(--cust-font-fam-claris);
     font-size: var(--logo-size);
     color: var(--color-white);
