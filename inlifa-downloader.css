@@ -25,7 +25,8 @@
     /* Color variables */
     --color-white: white;
     --color-black: black;
-    --color-border: rgba(200, 200, 200, 0.514);
+    --color-light-gray: rgba(200, 200, 200, 0.514);
+    --color-dark-gray: rgb(94, 91, 91);
     /* Gradient variables */
     --grad-insta: 30deg, #fff265 0%, #fff050 5%, #ff402f 45%, #d9189c 60%, #184be7 90%;
     --grad-insta-zoomed: 30deg, #fff265 0%, #fff050 0%, #ff402f 0%, #d9189c 0%, #184be7 880%;
@@ -78,7 +79,6 @@ header{
 }
 /* Inside Main Tag */
 .inlifa-logo{
-    user-select: none;
     font-family: var(--cust-font-fam-claris);
     font-size: var(--logo-size);
     color: var(--color-white);
@@ -174,14 +174,14 @@ header{
 .downloader{
     height: 4.4rem; width: 5.5rem;
     border-width: 0 0.01rem 0 0;
-    border-color: var(--color-border);
+    border-color: var(--color-light-gray);
 }
 .tk{
     padding-right: .6rem;
     border-width: 0;
     border-radius: 0 2rem 2rem 0;
 }
-/*inlifa-insta[download-steps, features, faqs(footer)] - div */
+/*inlifa-insta(download-steps, features, faqs(footer)) - div */
 #inlifa-insta{
     padding: 0rem 15rem;
     width: 126.6rem; 
@@ -267,7 +267,7 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
 .step-callout{
     margin: 2.5rem 0 0 8rem;
     height: 0; width: 0;
-    position: absolute;
+    position: absolute; 
     border-left: 1.5rem solid transparent;
     border-right: 1.5rem solid transparent;
     border-bottom:1.5rem solid var(--color-black);
@@ -297,7 +297,7 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
 }
 .step-instruction{
     padding-top: 0.8rem;
-    border-top: .2rem solid var(--color-border);
+    border-top: .2rem solid var(--color-light-gray);
     text-align: center;
     font-size: 1.05rem;
     font-weight: 600;
@@ -309,7 +309,7 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     width: inherit;
     display: flex;
     flex-direction: column;
-    border-top: .2rem solid var(--color-border);
+    border-top: .2rem solid var(--color-light-gray);
 }
 .features-title{
     margin-bottom: 7rem;
@@ -396,7 +396,7 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     font-size: 1.5rem;
     cursor: text; 
 }
-    /* Footer */
+
 footer{
     margin-top: 10rem;
     padding: inherit;
