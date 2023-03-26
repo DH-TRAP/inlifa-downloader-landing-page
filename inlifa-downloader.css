@@ -181,7 +181,7 @@ header{
     border-width: 0;
     border-radius: 0 2rem 2rem 0;
 }
-/*inlifa-insta(download-steps, features, faqs(footer)) - div */
+/*inlifa-insta[download-steps, features, faqs(footer)] - div */
 #inlifa-insta{
     padding: 0rem 15rem;
     width: 126.6rem; 
@@ -350,45 +350,54 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     /* Faqs */
 #faqs{
     width: inherit;
+    padding: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#faqs > h1{ margin-bottom: 3rem; }
+.que{
+    width: inherit;
     padding: inherit;
 }
-#faqs > h1{ line-height: 10rem; }
-.que{
-    padding: 0 1.8rem;
-    padding-bottom: 1rem;
-    width: 100rem;
-    display: flex;
-    flex-direction: column;
-}
-.que > span{
-    padding: 0 1.5rem .5rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    border: .2rem solid var(--color-border);
-}
-.collapse{
+.faq-ans > a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-dark-gray);
     cursor: pointer;
-    position: absolute;
-    margin: -.1rem -1.5rem;
-    height: 3.6rem; width: 96rem;
 }
-.que > span > h1, .cross-sign{
-    font-size: 2rem;
-    line-height: 3rem;
+.que > input[type="checkbox"]{ display: none; }
+.que > input[type="checkbox"]:checked + label{ 
+    height: 12rem; 
+}
+.que > label{
+    margin: 1rem 0;
+    height: 4rem;
+    padding: 0 2rem;
+    display: block;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem;
+    border: .1rem solid var(--color-light-gray);
+    cursor: pointer;
+    transition: .5s ease;
+}
+.faq-heading{
+    line-height: 4rem;
     display: flex;
     justify-content: space-between;
 }
-input[type="checkbox"]{ display: none; }
-input[type="checkbox"]:checked + label{ height: 20rem; }
 .cross-sign{
+    color: var(--color-dark-gray);
     user-select: none;
-    word-wrap: break-word;
 }
-.que > span > p{ display: none; }
+.faq-ans{
+    padding-right: 3rem;
+    color: var(--color-dark-gray);
+    font-size: 1.5rem;
+    cursor: text; 
+}
     /* Footer */
 footer{
     margin-top: 10rem;
