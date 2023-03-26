@@ -367,9 +367,7 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     cursor: pointer;
 }
 .que > input[type="checkbox"]{ display: none; }
-.que > input[type="checkbox"]:checked + label{ 
-    height: 12rem; 
-}
+.que > input[type="checkbox"]:checked + label{ height: 12rem; }
 .que > label{
     margin: 1rem 0;
     height: 4rem;
