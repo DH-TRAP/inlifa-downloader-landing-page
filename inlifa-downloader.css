@@ -1,11 +1,11 @@
-/* Varaibles */
+/* Global Variables */
 :root {
     /* Default variables */
     --def-font-fam-helvetica: Helvetica, sans-serif;
     --def-font-style: normal;
     --def-font-size: 2rem;
     --def-font-weight: 400;
-    /* Custom font variables */ 
+    /* Custom font variables */
     --cust-font-fam-claris: 'claris-sans';
     --cust-font-fam-josefin: 'Josefin Sans', sans-serif;
     --cust-font-fam-inter: 'Inter', sans-serif;
@@ -31,14 +31,17 @@
     --grad-insta: 30deg, #fff265 0%, #fff050 5%, #ff402f 45%, #d9189c 60%, #184be7 90%;
     --grad-insta-zoomed: 30deg, #fff265 0%, #fff050 0%, #ff402f 0%, #d9189c 0%, #184be7 880%;
 }
+
 /* Logo Font */
 @font-face {
     font-family: 'claris-sans';
     src: url('./fonts/claris-sans.ttf');
 }
-/* Global Variables */
-*{
-    margin: 0; padding: 0;
+
+/* Global Elements */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: var(--def-font-fam-helvetica);
     font-style: var(--def-font-style);
@@ -58,18 +61,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color:(var(--color-white));
+    background-color: (var(--color-white));
 }
-main{
+main {
     padding: 0 15rem;
-    height: 61.7rem; width: 126.6rem; 
+    height: 61.7rem;
+    width: 126.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(var(--grad-insta));
 }
-header{
+header {
     width: inherit;
     padding: inherit;
     display: flex;
@@ -77,80 +81,96 @@ header{
     justify-content: space-between;
     color: var(--color-white);
 }
+
 /* Inside Main Tag */
-.inlifa-logo{
+.inlifa-logo {
     font-family: var(--cust-font-fam-claris);
     font-size: var(--logo-size);
     color: var(--color-white);
 }
-.lang{
+.lang {
     font-family: var(--def-font-fam-helvetica);
     font-size: 1.7rem;
 }
-.main-title{
+.main-title {
     margin: 10rem 0 5rem 0;
     width: inherit;
     padding: inherit;
     color: var(--color-white);
 }
 /*////for common titles */
-.main-title > h1, .download-steps-title > h1, .features-title > h1, #faqs > h1{
+.main-title>h1,
+.download-steps-title>h1,
+.features-title>h1,
+#faqs>h1 {
     text-align: center;
     line-height: 5rem;
     font-family: var(--cust-font-fam-josefin);
     font-weight: var(--title-weight);
     font-size: var(--title-size);
 }
-.main-title > p, .download-steps-title > p, .features-title > p {
+.main-title>p,
+.download-steps-title>p,
+.features-title>p {
     text-align: center;
     font-family: var(--def-font-fam-helvetica);
     font-weight: var(--description-weight);
     font-size: var(--description-size);
 }
-.download-steps-title > p {
+.download-steps-title>p {
     font-size: 1.7rem;
 }
-.actions{
+.actions {
     margin-bottom: 18rem;
     padding: inherit;
     width: inherit;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 1.5rem;
 }
-.url-group{
+.url-group {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
-.user-url{
-    height: 5rem; width: 82rem;
+.user-url {
+    height: 5rem;
+    width: 82rem;
     padding: 0rem 4rem 0rem 1rem;
     font-family: var(--def-font-fam-helvetica);
     font-size: 1.5rem;
     border-radius: .7rem;
     border: none;
 }
-.paste{
+.paste {
     position: absolute;
-    margin-left: 75rem; padding: .3rem;
-    height: 3rem; width: 6rem;
+    margin-left: 75rem;
+    padding: .3rem;
+    height: 3rem;
+    width: 6rem;
     text-align: center;
     color: var(--color-white);
     border-radius: 1rem;
     border: none;
     background: linear-gradient(var(--grad-insta-zoomed));
 }
-.paste > span > img{ width: 1.4rem; }
-.download > img{ width: 2rem; }
-.paste > span{
+.paste>span>img {
+    width: 1.4rem;
+}
+.download>img {
+    width: 2rem;
+}
+.paste>span {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.paste > span > p{ font-size: 1.3rem; }
-.download{
-    height: 5.4rem; width: 13rem;
+.paste>span>p {
+    font-size: 1.3rem;
+}
+.download {
+    height: 5.4rem;
+    width: 13rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,122 +180,145 @@ header{
     border: none;
     background-color: var(--color-black);
 }
-.download > p{ font-size: 1.6rem; }
-
-.downloaders{ display: flex; }
-.downloaders > button > img{ width: 2.5rem; }
-.ig{
+.download>p {
+    font-size: 1.6rem;
+}
+.downloaders {
+    display: flex;
+}
+.downloaders>button>img {
+    width: 2.5rem;
+}
+.ig {
     padding-left: .6rem;
-    text-align:center;
+    text-align: center;
     border-radius: 2rem 0 0 2rem;
     border-width: 0;
     background-color: var(--color-black);
 }
-.downloader{
-    height: 4.4rem; width: 5.5rem;
+.downloader {
+    height: 4.4rem;
+    width: 5.5rem;
     border-width: 0 0.01rem 0 0;
     border-color: var(--color-light-gray);
 }
-.tk{
+.tk {
     padding-right: .6rem;
     border-width: 0;
     border-radius: 0 2rem 2rem 0;
 }
+
 /*inlifa-insta(download-steps, features, faqs(footer)) - div */
-#inlifa-insta{
+#inlifa-insta {
     padding: 0rem 15rem;
-    width: 126.6rem; 
+    width: 126.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--color-white);
 }
-    /* Download Steps */
-#download-steps{
+/* Download Steps */
+#download-steps {
     padding: inherit;
     padding-top: 6rem;
-    height: 61.7rem; width: inherit;
+    height: 61.7rem;
+    width: inherit;
     display: flex;
     flex-direction: column;
 }
-.download-cards{
+.download-cards {
     height: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.download-card{
-    height: 25rem; width: 20rem;
+.download-card {
+    height: 25rem;
+    width: 20rem;
     display: flex;
     flex-direction: column;
     border-radius: 2rem 3.3rem 2rem 2rem;
     box-shadow: var(--shadow-medium-sharp);
 }
-div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
+div[name="STEP-1"],
+[name="STEP-2"],
+[name="STEP-3"] {
     line-height: 5rem;
     text-align: center;
     font-family: var(--cust-font-fam-inter);
     font-size: 1.8rem;
     font-weight: 700;
 }
-.card-top{
-    height: 12.5rem; width: 20rem;
+.card-top {
+    height: 12.5rem;
+    width: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 2rem 2rem 0 0;
     background: linear-gradient(var(--grad-insta));
 }
-.card-link{
-    height: 2rem; width: 17rem;
+.card-link {
+    height: 2rem;
+    width: 17rem;
     padding: .5rem;
     text-align: center;
     font-family: var(--def-font-fam-helvetica);
     border-radius: 1rem;
     background-color: var(--color-white);
 }
-.dummy-paste{
+.dummy-paste {
     position: absolute;
     margin-left: 12.2rem;
     padding: .3rem;
-    height: 1.5rem; width: 3.9rem;
+    height: 1.5rem;
+    width: 3.9rem;
     text-align: center;
     border-radius: 1rem;
     color: var(--color-white);
     background: linear-gradient(var(--grad-insta-zoomed));
 }
-.dummy-paste > span{
+.dummy-paste>span {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .2rem;
 }
-.dummy-paste > span > img{ height: .7rem; width: .7rem; } 
-.dummy-text{ font-size: .75rem; }
-.step-1{ font-size: .8rem; }
-.step-2{
+.dummy-paste>span>img {
+    height: .7rem;
+    width: .7rem;
+}
+.dummy-text {
+    font-size: .75rem;
+}
+.step-1 {
+    font-size: .8rem;
+}
+.step-2 {
     display: flex;
     align-items: center;
     font-size: .8rem;
 }
-.step-3{
+.step-3 {
     word-spacing: 1.4rem;
     font-weight: 600;
     font-size: 1rem;
 }
-.step-callout{
+.step-callout {
     margin: 2.5rem 0 0 8rem;
-    height: 0; width: 0;
-    position: absolute; 
+    height: 0;
+    width: 0;
+    position: absolute;
     border-left: 1.5rem solid transparent;
     border-right: 1.5rem solid transparent;
-    border-bottom:1.5rem solid var(--color-black);
+    border-bottom: 1.5rem solid var(--color-black);
 }
-.step-callout p{
+.step-callout p {
     margin: 1rem 0rem 0rem -3rem;
     padding: .2rem;
-    height: 1.7rem; width: 6rem;
+    height: 1.7rem;
+    width: 6rem;
     text-align: center;
     font-size: 1rem;
     border-radius: 2rem;
@@ -283,27 +326,29 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     background-color: var(--color-black);
     box-shadow: -0.2vh -0.1vw 0vw;
 }
-.card-bottom{
+.card-bottom {
     padding: 1.1rem;
-    height: 12.5rem; width: 20rem;
+    height: 12.5rem;
+    width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 2rem 2rem 0 0;
 }
-.step-title{
+.step-title {
     font-size: 1.7rem;
 }
-.step-instruction{
+.step-instruction {
     padding-top: 0.8rem;
     border-top: .2rem solid var(--color-light-gray);
     text-align: center;
     font-size: 1.05rem;
     font-weight: 600;
 }
-    /* Features */
-#features{
+
+/* Features */
+#features {
     padding: inherit;
     padding-top: 6rem;
     width: inherit;
@@ -311,64 +356,80 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     flex-direction: column;
     border-top: .2rem solid var(--color-light-gray);
 }
-.features-title{
+.features-title {
     margin-bottom: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.feature{
+.feature {
     margin-bottom: 7rem;
     display: grid;
     align-items: center;
 }
-.odd{ grid-template-columns: .8fr 1fr; }
-.even{
+.odd {
+    grid-template-columns: .8fr 1fr;
+}
+.even {
     grid-template-columns: 1fr .7fr;
     direction: rtl;
     text-align: left;
 }
-.download-photos, .download-videos, .download-igtv,.download-reels, .download-story{
+.download-photos,
+.download-videos,
+.download-igtv,
+.download-reels,
+.download-story {
     height: 32rem;
     border-radius: 2.3rem;
     box-shadow: var(--shadow-large-blur);
 }
-.img-group{ text-align: justify; }
-.download-reels, .download-story{
+.img-group {
+    text-align: justify;
+}
+.download-reels,
+.download-story {
     margin: 0 0.5rem;
     height: 22rem;
 }
-.feature-content > h1{
+.feature-content>h1 {
     line-height: 5rem;
     font-size: 2.1rem;
     font-weight: 700;
 }
-.feature-content > p{
+.feature-content>p {
     font-size: 1.4rem;
     font-weight: var(--description-size);
 }
-    /* Faqs */
-#faqs{
+
+/* Faqs */
+#faqs {
     width: inherit;
     padding: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#faqs > h1{ margin-bottom: 3rem; }
-.que{
+#faqs>h1 {
+    margin-bottom: 3rem;
+}
+.que {
     width: inherit;
     padding: inherit;
 }
-.faq-ans > a{
+.faq-ans>a {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-dark-gray);
     cursor: pointer;
 }
-.que > input[type="checkbox"]{ display: none; }
-.que > input[type="checkbox"]:checked + label{ height: 12rem; }
-.que > label{
+.que>input[type="checkbox"] {
+    display: none;
+}
+.que>input[type="checkbox"]:checked+label {
+    height: 12rem;
+}
+.que>label {
     margin: 1rem 0;
     height: 4rem;
     padding: 0 2rem;
@@ -381,33 +442,33 @@ div[name="STEP-1"], [name="STEP-2"], [name="STEP-3"]{
     cursor: pointer;
     transition: .5s ease;
 }
-.faq-heading{
+.faq-heading {
     line-height: 4rem;
     display: flex;
     justify-content: space-between;
 }
-.cross-sign{
+.cross-sign {
     color: var(--color-dark-gray);
     user-select: none;
 }
-.faq-ans{
+.faq-ans {
     padding-right: 3rem;
     color: var(--color-dark-gray);
     font-size: 1.5rem;
-    cursor: text; 
+    cursor: text;
 }
-
-footer{
+footer {
     margin-top: 10rem;
     padding: inherit;
-    height: 12rem; width: inherit;
+    height: 12rem;
+    width: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--color-white);
     background-color: var(--color-black);
 }
-.outro{
+.outro {
     margin-right: 28rem;
     padding: 2rem;
     height: inherit;
@@ -416,19 +477,20 @@ footer{
     align-items: flex-start;
     justify-content: space-between;
 }
-.copyright{
+.copyright {
     letter-spacing: .12rem;
     font-size: 1.2rem;
     font-weight: 400;
 }
-.feature-links{
+.feature-links {
     padding: 2rem 2rem 0 2rem;
     height: inherit;
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 4.5rem; row-gap: .8rem;
+    column-gap: 4.5rem;
+    row-gap: .8rem;
 }
-.other-links{
+.other-links {
     padding: 2rem;
     height: inherit;
     display: flex;
@@ -436,44 +498,64 @@ footer{
     align-items: flex-end;
     justify-content: space-between;
 }
-.feature-links > a, .other-links > a{ font-size: 1.4rem; }
+.feature-links>a,
+.other-links>a {
+    font-size: 1.4rem;
+}
+
 /* Transitions */
-.inlifa-logo, .lang{
+.inlifa-logo,
+.lang {
     transition: 1s ease-in-out;
     color: var(--color-white);
 }
-#header > .inlifa-logo:hover, .lang:hover{ color: var(--color-black); }
-.paste, .download, .download-card, .feature > img, .img-group > img{ transition: .5s ease-in-out; }
-.paste:hover{
-    height: 3.1rem; width: 6.1rem;
+#header>.inlifa-logo:hover,
+.lang:hover {
+    color: var(--color-black);
+}
+.paste,
+.download,
+.download-card,
+.feature>img,
+.img-group>img {
+    transition: .5s ease-in-out;
+}
+.paste:hover {
+    height: 3.1rem;
+    width: 6.1rem;
     box-shadow: var(--shadow-medium-sharp);
 }
-.download:hover{
+.download:hover {
     padding-top: 0.2rem;
     box-shadow: var(--shadow-medium-sharp);
 }
-.download-card:hover{ margin-top: .5rem; }
-.feature > img:hover, .img-group > img:hover{ box-shadow: var(--shadow-medium-sharp); }
-/* End */
+.download-card:hover {
+    margin-top: .5rem;
+}
+.feature>img:hover,
+.img-group>img:hover {
+    box-shadow: var(--shadow-medium-sharp);
+}
 
+/* End */
 
 /* Media Queries: Supported on almost all Android smartphones and tablets */
 /* Watch - 162px */
 @media (min-width: 0px) and (max-width: 162px) {
     html {
-        font-size: 7.9%;  
+        font-size: 7.9%;
     }
 }
 /* Mobile S - 320px */
 @media (min-width: 163px) and (max-width: 320px) {
     html {
-        font-size: 15.8%;  
+        font-size: 15.8%;
     }
 }
 /* Mobile M - 375px */
 @media (min-width: 321px) and (max-width: 375px) {
     html {
-        font-size: 18.5%;  
+        font-size: 18.5%;
     }
 }
 /* Mobile L - 425px */
@@ -497,18 +579,30 @@ footer{
 /* Laptop M - 1440px */
 @media (min-width: 1025px) and (max-width: 1440px) {
     html {
-        font-size: 66.6%;
+        font-size: 71.1%;
     }
 }
-/* Laptop L - 1536px */
+/* Laptop L - 1540px */
 @media (min-width: 1441px) and (max-width: 1540px) {
     html {
-        font-size: 75%;
+        font-size: 76%;
+    }
+}
+/* Laptop L - 1740px */
+@media (min-width: 1541px) and (max-width: 1740px) {
+    html {
+        font-size: 86%;
+    }
+}
+/* Desktop- 1940px */
+@media (min-width: 1741px) and (max-width: 1940px) {
+    html {
+        font-size: 96%;
     }
 }
 /* 4K- 2560px */
-@media (min-width: 1541px) and (max-width: 2560px) {
+@media (min-width: 1941px) and (max-width: 2560px) {
     html {
-        font-size: 126.4%;
+        font-size: 100%;
     }
 }
